@@ -1,16 +1,10 @@
 import groovy.io.FileType
 import groovy.swing.SwingBuilder
 import groovy.transform.Field
-import org.apache.tools.ant.util.FileUtils
 
-import javax.swing.JList
-import java.nio.file.Files
+import javax.swing.*
 
-import static java.awt.GridBagConstraints.EAST
-import static java.awt.GridBagConstraints.HORIZONTAL
-import static java.awt.GridBagConstraints.NONE
-import static java.awt.GridBagConstraints.REMAINDER
-import static java.awt.GridBagConstraints.WEST
+import static java.awt.GridBagConstraints.*
 import static javax.swing.JFrame.EXIT_ON_CLOSE
 
 @Field File userHomeDir = new File(System.getProperty('user.home'))
