@@ -20,8 +20,6 @@ minecraftSavesDir = new File(minecraftBaseDir, 'saves')
 
 populateMinecraftSavesDirectoryNamesListModel()
 
-// TODO Set weightx/weighty values http://stackoverflow.com/questions/13040747/resize-components-on-frame-resize-java
-
 new SwingBuilder().edt {
     mainFrame = frame(
             title: 'Minecraft Backup',
@@ -30,7 +28,7 @@ new SwingBuilder().edt {
             show: true,
             locationRelativeTo: null,
             defaultCloseOperation: EXIT_ON_CLOSE) {
-        lookAndFeel 'nimbus'
+        lookAndFeel 'system'
         gridBagLayout()
         label(
                 constraints: gbc(
@@ -88,7 +86,7 @@ new SwingBuilder().edt {
                     }
                 }
         )
-        minecraftSavesDirectoryNamesJList = list(
+        scrollPane(
                 constraints: gbc(
                         gridx: 0,
                         gridy: 1,
@@ -99,9 +97,12 @@ new SwingBuilder().edt {
                         insets: [5, 5, 0, 5],
                         weightx: 1,
                         weighty: 1
-                ),
-                model: minecraftSavesDirectoryNamesListModel
-        )
+                )
+        ) {
+            minecraftSavesDirectoryNamesJList = list(
+                    model: minecraftSavesDirectoryNamesListModel
+            )
+        }
         label(
                 constraints: gbc(
                         gridx: 0,
