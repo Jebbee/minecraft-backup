@@ -28,6 +28,7 @@ new SwingBuilder().edt {
     mainFrame = frame(
             title: 'Minecraft Backup',
             minimumSize: [300, 120],
+            maximumSize: [1200, 600],
             pack: true,
             show: true,
             locationRelativeTo: null,
@@ -94,7 +95,7 @@ new SwingBuilder().edt {
                 constraints: gbc(
                         gridx: 0,
                         gridy: 1,
-                        gridwidth: 1,
+                        gridwidth: REMAINDER,
                         gridheight: 1,
                         fill: NONE,
                         anchor: WEST,

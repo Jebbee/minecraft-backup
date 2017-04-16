@@ -13,11 +13,6 @@
             <artifactId>groovy-all</artifactId>
             <version>2.4.10</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.codehaus.groovy</groupId>-->
-            <!--<artifactId>groovy-ant</artifactId>-->
-            <!--<version>2.4.10</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -63,6 +58,7 @@
                 <executions>
                     <execution>
                         <configuration>
+                            <filename>${project.artifactId}.jar</filename>
                             <mainClass>MinecraftBackup</mainClass>
                             <attachToBuild>true</attachToBuild>
                         </configuration>
